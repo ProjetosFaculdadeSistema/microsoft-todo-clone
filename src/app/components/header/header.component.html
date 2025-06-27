@@ -1,0 +1,19 @@
+<header class="bg-white py-4 px-6 border-b flex justify-between items-center">
+  <h1 class="text-xl font-bold">TaskMaster</h1>
+
+  <nav class="flex gap-6 items-center text-sm">
+    <ng-container *ngIf="user; else visitante">
+      <span class="text-gray-600">Olá, <span class="text-blue-700 font-semibold">{{ user.name }}</span></span>
+      <a routerLink="/" class="hover:underline">Home</a>
+      <a routerLink="/dashboard" class="hover:underline">Dashboard</a>
+      <button (click)="logout()" class="text-red-600 hover:underline">Sair</button>
+    </ng-container>
+
+    <ng-template #visitante>
+      <a routerLink="/" class="hover:underline">Home</a>
+      <a routerLink="/login" class="hover:underline">Login</a>
+      <a routerLink="/registro" class="hover:underline">Registro</a>
+    </ng-template>
+  </nav>
+</header>
+
