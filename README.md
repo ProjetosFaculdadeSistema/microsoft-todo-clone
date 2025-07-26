@@ -17,40 +17,27 @@ Git
 
 Instalação
 Backend
-Navegue até a pasta backend:
+Navegue até a pasta backend: cd backend
 
-cd backend
-
-Instale dependências:
-
-npm install
+Instale dependências: npm install
 
 Configure variáveis de ambiente (.env):
 
-MONGO_URI=<sua-string-de-conexao-mongodb>
-JWT_SECRET=<seu-segredo-jwt>
+MONGO_URI=<sua-string-de-conexao-mongodb>  
+JWT_SECRET=<seu-segredo-jwt>  
 PORT=5000
 
-Inicie o backend:
-
-npm run dev
+Inicie o backend: npm run dev
 
 Frontend
-Navegue até a pasta frontend:
+Navegue até a pasta frontend: cd frontend
 
-cd frontend
-
-Instale dependências:
-
-npm install
+Instale dependências: npm install
 
 Configure o arquivo de ambiente se necessário (exemplo: .env):
 
-VITE_API_URL=http://localhost:5000
-
-Inicie o frontend:
-
-npm run dev
+VITE_API_URL=http://localhost:5000  
+Inicie o frontend: npm run dev
 
 Uso
 Acesse a aplicação no navegador no endereço http://localhost:5173 (ou porta exibida pelo Vite).
@@ -59,12 +46,11 @@ Faça cadastro, login e gerencie suas tarefas com backend integrado.
 
 Git
 Para subir alterações:
-
 git add .
 git commit -m "Sua mensagem"
 git push origin main
 
 Observações
-Certifique-se que backend está rodando antes do frontend para que as chamadas API funcionem.
+Certifique que backend está rodando antes do frontend para que as chamadas API funcionem.
 
 Ajuste variáveis de ambiente conforme seu ambiente local.
