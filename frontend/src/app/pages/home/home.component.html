@@ -1,0 +1,73 @@
+<section class="bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800 min-h-[calc(100vh-4rem)] flex flex-col items-center text-center px-4 py-10 transition-colors duration-300">
+  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Bem-vindo ao TaskMaster</h1>
+  <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-xl">
+    A melhor forma de organizar suas tarefas e aumentar sua produtividade.
+    Simples, eficiente e sempre ao seu alcance.
+  </p>
+
+  <!-- Botões principais -->
+  <div class="flex flex-wrap gap-4 mb-12">
+    <button
+      (click)="comecarAgora()"
+      class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+    >
+      Começar Agora
+    </button>
+
+    <button
+      (click)="router.navigate(['/login'])"
+      class="border border-gray-400 dark:border-gray-600 text-gray-800 dark:text-gray-200 px-6 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+    >
+      Fazer Login
+    </button>
+  </div>
+
+  <!-- Vantagens -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl w-full">
+    <div class="bg-white dark:bg-gray-700 p-6 rounded shadow text-center transition-colors duration-300">
+      <div class="text-3xl mb-2">✅</div>
+      <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Gerencie Tarefas</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-300">
+        Adicione, edite e organize suas tarefas de forma intuitiva. Mantenha tudo sob controle.
+      </p>
+    </div>
+    <div class="bg-white dark:bg-gray-700 p-6 rounded shadow text-center transition-colors duration-300">
+      <div class="text-3xl mb-2">📊</div>
+      <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Acompanhe Progresso</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-300">
+        Veja o status das tarefas em tempo real. Marque como concluídas e acompanhe sua evolução.
+      </p>
+    </div>
+    <div class="bg-white dark:bg-gray-700 p-6 rounded shadow text-center transition-colors duration-300">
+      <div class="text-3xl mb-2">🎯</div>
+      <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Interface Simples</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-300">
+        Design limpo e responsivo. Funciona perfeitamente em qualquer dispositivo.
+      </p>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="mt-16 bg-white dark:bg-gray-700 p-8 rounded shadow max-w-3xl w-full transition-colors duration-300">
+    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Pronto para ser mais produtivo?</h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-4">
+      Junte-se a milhares de usuários que já organizam suas tarefas com o TaskMaster
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <button
+        (click)="router.navigate(['/registro'])"
+        class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+      >
+        Criar Conta Grátis
+      </button>
+
+      <button
+        disabled
+        class="border border-gray-400 dark:border-gray-600 text-gray-400 dark:text-gray-500 px-6 py-2 rounded cursor-not-allowed"
+        title="Em breve"
+      >
+        Ver Demonstração
+      </button>
+    </div>
+  </div>
+</section>

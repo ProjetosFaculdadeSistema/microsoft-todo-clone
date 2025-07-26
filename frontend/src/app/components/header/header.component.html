@@ -1,0 +1,30 @@
+<nav class="w-full h-16 bg-white dark:bg-gray-900 border-b shadow-sm flex items-center justify-between px-6">
+  <div class="text-xl font-bold text-gray-800 dark:text-white">TaskMaster</div>
+
+  <div class="flex items-center gap-6 text-sm text-gray-700 dark:text-gray-200">
+    <span *ngIf="logado">
+      Olá, <span class="font-medium text-blue-600 dark:text-blue-400">{{ nomeUsuario }}</span>
+    </span>
+
+    <a *ngIf="!logado" routerLink="/" class="hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+
+    <a *ngIf="logado" routerLink="/dashboard" class="hover:text-blue-600 dark:hover:text-blue-400 flex items-center gap-1">
+      <span class="material-icons">dashboard</span> Dashboard
+    </a>
+    <a *ngIf="logado" (click)="sair()" class="hover:text-red-600 flex items-center gap-1">
+      <span class="material-icons">logout</span> Sair
+    </a>
+
+    <a *ngIf="!logado" routerLink="/login" class="hover:text-blue-600 dark:hover:text-blue-400 flex items-center gap-1">
+      <span class="material-icons">login</span> Login
+    </a>
+    <a *ngIf="!logado" routerLink="/registro" class="hover:text-blue-600 dark:hover:text-blue-400 flex items-center gap-1">
+      <span class="material-icons">person_add</span> Registro
+    </a>
+
+    <!-- Botão para alternar tema -->
+    <button (click)="toggleDarkMode()" class="hover:text-yellow-500" title="Alternar tema">
+      <span class="material-icons">light_mode</span>
+    </button>
+  </div>
+</nav>

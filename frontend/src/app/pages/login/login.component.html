@@ -1,0 +1,28 @@
+<section class="min-h-[calc(100vh-4rem)] bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800 flex flex-col items-center justify-center px-4 py-10 transition-colors duration-300">
+  <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-1">TaskMaster</h1>
+  <p class="text-gray-600 dark:text-gray-300 mb-6 text-center">Organize suas tarefas de forma simples e eficiente</p>
+
+  <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md w-full max-w-md text-center transition-colors duration-300">
+    <h2 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Entrar</h2>
+    <p class="text-sm text-gray-500 dark:text-gray-300 mb-6">Entre com sua conta para acessar suas tarefas</p>
+
+    <form (ngSubmit)="fazerLogin()" class="space-y-4">
+      <div class="text-left text-sm font-medium text-gray-700 dark:text-gray-300">Email</div>
+      <input [(ngModel)]="email" name="email" type="email" placeholder="seu@email.com"
+        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-200 dark:bg-gray-800 dark:border-gray-600 dark:text-white" required>
+
+      <div class="text-left text-sm font-medium text-gray-700 dark:text-gray-300">Senha</div>
+      <input [(ngModel)]="password" name="password" type="password" placeholder="Sua senha"
+        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-200 dark:bg-gray-800 dark:border-gray-600 dark:text-white" required>
+
+      <button type="submit" class="w-full bg-gray-900 text-white py-2 rounded hover:bg-gray-800">Entrar</button>
+    </form>
+
+    <div *ngIf="erro" class="text-red-600 dark:text-red-400 text-sm mt-4">{{ erro }}</div>
+  </div>
+
+  <div class="mt-6 text-sm text-gray-600 dark:text-gray-300 text-center">
+    Não tem uma conta?
+    <a routerLink="/registro" class="text-blue-600 dark:text-blue-400 hover:underline">Cadastre-se aqui</a>
+  </div>
+</section>
